@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D34E45E1-B708-4A31-919B-F3579A7E1364}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Livraria_da_depressao</RootNamespace>
+    <AssemblyName>Livraria_da_depressao</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CODE\BLL\configuracoesBLL.cs" />
+    <Compile Include="CODE\BLL\inicioBLL.cs" />
+    <Compile Include="CODE\BLL\LoginBLL.cs" />
+    <Compile Include="CODE\DAL\Conexao.cs" />
+    <Compile Include="CODE\DTO\clientesEmprestimoDTO.cs" />
+    <Compile Include="CODE\DTO\configuracoesDTO.cs" />
+    <Compile Include="CODE\DTO\inicioDTO.cs" />
+    <Compile Include="CODE\DTO\livrosEmprestimoDTO.cs" />
+    <Compile Include="CODE\DTO\LoginDTO.cs" />
+    <Compile Include="CODE\DTO\reservaDTO.cs" />
+    <Compile Include="CODE\DTO\usuarioSessaoDTO.cs" />
+    <Compile Include="FORMS\Configuracoes\frmAutorConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmAutorConf.Designer.cs">
+      <DependentUpon>frmAutorConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmCategoriaConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmCategoriaConf.Designer.cs">
+      <DependentUpon>frmCategoriaConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmConfiguracoes.Designer.cs">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmEditoraConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmEditoraConf.Designer.cs">
+      <DependentUpon>frmEditoraConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmLivroConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmLivroConf.Designer.cs">
+      <DependentUpon>frmLivroConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmMultaConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmMultaConf.Designer.cs">
+      <DependentUpon>frmMultaConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmUsuarioConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmUsuarioConf.Designer.cs">
+      <DependentUpon>frmUsuarioConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmFuncionarioConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\frmFuncionarioConf.Designer.cs">
+      <DependentUpon>frmFuncionarioConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerAutores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerAutores.Designer.cs">
+      <DependentUpon>ucGerAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerCategorias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerCategorias.Designer.cs">
+      <DependentUpon>ucGerCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerEditoras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerEditoras.Designer.cs">
+      <DependentUpon>ucGerEditoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerFuncionarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerFuncionarios.Designer.cs">
+      <DependentUpon>ucGerFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerLivros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerLivros.Designer.cs">
+      <DependentUpon>ucGerLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerMultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerMultas.Designer.cs">
+      <DependentUpon>ucGerMultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Configuracoes\ucGerUsuarios.Designer.cs">
+      <DependentUpon>ucGerUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmAlterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmAlterarSenha.Designer.cs">
+      <DependentUpon>frmAlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmAtualizarMulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmAtualizarMulta.Designer.cs">
+      <DependentUpon>frmAtualizarMulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmCadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmCadastrarCliente.Designer.cs">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmDetalhesEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmDetalhesEmprestimo.Designer.cs">
+      <DependentUpon>frmDetalhesEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmMenuInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmMenuInicial.Designer.cs">
+      <DependentUpon>frmMenuInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmNovoEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmNovoEmprestimo.Designer.cs">
+      <DependentUpon>frmNovoEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmAtualizarEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmAtualizarEmprestimo.Designer.cs">
+      <DependentUpon>frmAtualizarEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\frmReserva.Designer.cs">
+      <DependentUpon>frmReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucClientes.Designer.cs">
+      <DependentUpon>ucClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucConfirmacaoTrocaSenha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucConfirmacaoTrocaSenha.Designer.cs">
+      <DependentUpon>ucConfirmacaoTrocaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucEmprestimos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucEmprestimos.Designer.cs">
+      <DependentUpon>ucEmprestimos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucMultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucMultas.Designer.cs">
+      <DependentUpon>ucMultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucPerfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucPerfil.Designer.cs">
+      <DependentUpon>ucPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucReservas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucReservas.Designer.cs">
+      <DependentUpon>ucReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucSelecionarEmprestimoReserva.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FORMS\Principal\ucSelecionarEmprestimoReserva.Designer.cs">
+      <DependentUpon>ucSelecionarEmprestimoReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMS\Configuracoes\frmAutorConf.resx">
+      <DependentUpon>frmAutorConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmCategoriaConf.resx">
+      <DependentUpon>frmCategoriaConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmConfiguracoes.resx">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmEditoraConf.resx">
+      <DependentUpon>frmEditoraConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmLivroConf.resx">
+      <DependentUpon>frmLivroConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmMultaConf.resx">
+      <DependentUpon>frmMultaConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmUsuarioConf.resx">
+      <DependentUpon>frmUsuarioConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\frmFuncionarioConf.resx">
+      <DependentUpon>frmFuncionarioConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerAutores.resx">
+      <DependentUpon>ucGerAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerCategorias.resx">
+      <DependentUpon>ucGerCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerEditoras.resx">
+      <DependentUpon>ucGerEditoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerFuncionarios.resx">
+      <DependentUpon>ucGerFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerLivros.resx">
+      <DependentUpon>ucGerLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerMultas.resx">
+      <DependentUpon>ucGerMultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Configuracoes\ucGerUsuarios.resx">
+      <DependentUpon>ucGerUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmAlterarSenha.resx">
+      <DependentUpon>frmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmAtualizarMulta.resx">
+      <DependentUpon>frmAtualizarMulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmCadastrarCliente.resx">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmDetalhesEmprestimo.resx">
+      <DependentUpon>frmDetalhesEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmMenuInicial.resx">
+      <DependentUpon>frmMenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmNovoEmprestimo.resx">
+      <DependentUpon>frmNovoEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmAtualizarEmprestimo.resx">
+      <DependentUpon>frmAtualizarEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\frmReserva.resx">
+      <DependentUpon>frmReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucClientes.resx">
+      <DependentUpon>ucClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucConfirmacaoTrocaSenha.resx">
+      <DependentUpon>ucConfirmacaoTrocaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucEmprestimos.resx">
+      <DependentUpon>ucEmprestimos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucMultas.resx">
+      <DependentUpon>ucMultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucPerfil.resx">
+      <DependentUpon>ucPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucReservas.resx">
+      <DependentUpon>ucReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Principal\ucSelecionarEmprestimoReserva.resx">
+      <DependentUpon>ucSelecionarEmprestimoReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\fundo.png" />
+    <Content Include="IMG\homem.jpg" />
+    <Content Include="IMG\indefinido.jpg" />
+    <Content Include="IMG\icones\locked.png" />
+    <None Include="IMG\Untitled-2.jpg" />
+    <None Include="Resources\power-icon-electric-power-sign-isolated-on-white-vector-216413581.png" />
+    <None Include="Resources\power-icon-electric-power-sign-isolated-on-white-vector-21641358.png" />
+    <None Include="Resources\engrenagem.png" />
+    <None Include="Resources\perfil.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\multa.png" />
+    <None Include="Resources\reserva.png" />
+    <None Include="Resources\emprestimo.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\Untitled-2.jpg" />
+    <None Include="IMG\logo.png" />
+    <None Include="IMG\logo-e-slogan.png" />
+    <Content Include="IMG\mulher.jpg" />
+    <Content Include="IMG\icones\unlocked.png" />
+    <None Include="IMG\Untitled-1.png" />
+    <None Include="IMG\Sem título-1_Prancheta 1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
