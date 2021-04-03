@@ -32,6 +32,8 @@ namespace Livraria_da_depressao.FORMS
 
         private void btPesquisar_Click(object sender, EventArgs e)
         {
+            panResultadosPesquisa.Visible = true;
+            panEntregas.Visible = false;
             efetuarPesquisa();
         }
 
@@ -136,6 +138,7 @@ namespace Livraria_da_depressao.FORMS
 
         private DataTable pesquisar_livro()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             DataTable dt = new DataTable();
             try
             {
@@ -159,6 +162,7 @@ namespace Livraria_da_depressao.FORMS
 
         private DataTable pesquisar_autor()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             DataTable dt = new DataTable();
             try
             {
@@ -182,6 +186,7 @@ namespace Livraria_da_depressao.FORMS
 
         private DataTable pesquisar_categoria()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             DataTable dt = new DataTable();
             try
             {
@@ -205,6 +210,7 @@ namespace Livraria_da_depressao.FORMS
 
         private DataTable pesquisar_editora()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             DataTable dt = new DataTable();
             try
             {
@@ -228,6 +234,7 @@ namespace Livraria_da_depressao.FORMS
 
         private DataTable pesquisar_livro_id()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             DataTable dt = new DataTable();
             try
             {
@@ -251,6 +258,7 @@ namespace Livraria_da_depressao.FORMS
 
         private string pesquisar_disponibilidade_livro(string idLivro)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             DataTable dt = new DataTable();
             try
             {
@@ -363,6 +371,7 @@ namespace Livraria_da_depressao.FORMS
         }
         private void carregar_emprestimos_hoje()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 Conexao.con.Open();
@@ -406,6 +415,14 @@ namespace Livraria_da_depressao.FORMS
                 //Consoles funcionam no Windows Forms. Idem Debug.Write();
                 //Console.WriteLine("Testando \"A\"");
                 efetuarPesquisa();
+            }
+            else
+            {
+                if (txtPesquisaLivro.Text == "")
+                {
+                    panResultadosPesquisa.Visible = false;
+                    panEntregas.Visible = true;
+                }
             }
         }
 

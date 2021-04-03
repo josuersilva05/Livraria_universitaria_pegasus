@@ -1,4 +1,5 @@
 ﻿using Livraria_da_depressao.CODE.BLL;
+using Livraria_da_depressao.CODE.DAL;
 using Livraria_da_depressao.CODE.DTO;
 using Livraria_da_depressao.FORMS;
 using System;
@@ -30,10 +31,10 @@ namespace Livraria_da_depressao
                 logdto.senha = txtSenha.Text;
                 if (usubll.verifica_login(logdto) == true)
                 {
+                    Console.Write(Conexao.con);
                     frmMenuInicial fmenu = new frmMenuInicial();
                     this.Hide();
                     fmenu.Show();
-
                 }
                 else
                 {

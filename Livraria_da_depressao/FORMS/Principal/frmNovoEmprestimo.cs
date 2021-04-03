@@ -163,6 +163,7 @@ namespace Livraria_da_depressao.FORMS.Principal
             {
                 if (cboLivroEmprestimo.Text != "")
                 {
+                    if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
                     Conexao.con.Open();
 
                     MySqlCommand msc = Conexao.con.CreateCommand();
@@ -219,7 +220,9 @@ namespace Livraria_da_depressao.FORMS.Principal
 
             try
             {
-                if (cboClienteEmprestimo.Text != "") {
+                if (cboClienteEmprestimo.Text != "")
+                {
+                    if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
                     Conexao.con.Open();
 
                     MySqlCommand msc = Conexao.con.CreateCommand();

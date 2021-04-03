@@ -17,6 +17,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_cliente(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -46,6 +47,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_cliente(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -76,6 +78,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool excluir_cliente(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -103,6 +106,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_emprestimo(inicioDTO emp)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -131,6 +135,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_emprestimo(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -161,6 +166,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool atualizar_status_emprestimo(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -187,6 +193,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool atualizar_multa_paga(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -211,6 +218,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public string pesquisar_multa_emprestimo(inicioDTO cli)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 Conexao.con.Open();
@@ -244,6 +252,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_reserva(inicioDTO idto)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -274,6 +283,7 @@ namespace Livraria_da_depressao.CODE.BLL
 
         public bool editar_reserva(inicioDTO idto)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -301,6 +311,7 @@ namespace Livraria_da_depressao.CODE.BLL
 
         public List<string> pesquisar_idClienteLivroReserva(string id)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 List<string> lst = new List<string>();

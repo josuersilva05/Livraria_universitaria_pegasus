@@ -72,7 +72,8 @@ namespace Livraria_da_depressao.FORMS
                 nomeFoto = "indefinido.jpg";
             }
             //@"C:/Users/josue/source/repos/Livraria_da_depressao/Livraria_da_depressao/IMG/" + nomeFoto
-            Image foto = Image.FromFile(@"C:/Users/Casa/source/repos/Livraria_da_depressao/Livraria_da_depressao/IMG/" + nomeFoto);
+            //Image foto = Image.FromFile(@"C:/Users/Casa/source/repos/Livraria_da_depressao/Livraria_da_depressao/IMG/" + nomeFoto);
+            Image foto = Image.FromFile(@"D:/0_Formatacao/source/repos/Livraria_da_depressao/Livraria_universitaria_pegasus/Livraria_da_depressao/IMG/" + nomeFoto);
             pcbFotoPerfil.Image = foto;
             pcbFotoPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
         }
