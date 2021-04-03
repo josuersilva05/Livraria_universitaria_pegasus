@@ -19,6 +19,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_funcionario(configuracoesDTO func)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -45,6 +46,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_funcionario(configuracoesDTO func)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -72,6 +74,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool excluir_funcionario(configuracoesDTO func)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -101,6 +104,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_usuario(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -128,6 +132,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_usuario(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -154,6 +159,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool excluir_usuario(configuracoesDTO func)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -184,6 +190,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_livro(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -214,6 +221,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_livro(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -245,6 +253,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool excluir_livro(configuracoesDTO func)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -275,6 +284,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_autor(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -299,6 +309,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_autor(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -329,6 +340,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_categoria(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -353,6 +365,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_categoria(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -383,6 +396,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_editora(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -407,6 +421,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_editora(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -437,6 +452,7 @@ namespace Livraria_da_depressao.CODE.BLL
         ///
         public bool cadastrar_multa(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -462,6 +478,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool editar_multa(configuracoesDTO conf)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;
@@ -488,6 +505,7 @@ namespace Livraria_da_depressao.CODE.BLL
         }
         public bool excluir_multa(configuracoesDTO func)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 bool result = false;

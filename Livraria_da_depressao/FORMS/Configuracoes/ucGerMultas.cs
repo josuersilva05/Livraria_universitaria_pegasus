@@ -78,6 +78,7 @@ namespace Livraria_da_depressao.FORMS.Configuracoes
 
         private void carregar_multas()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             Conexao.con.Open();
             MySqlCommand cmd = Conexao.con.CreateCommand();
             cmd.CommandType = CommandType.Text;

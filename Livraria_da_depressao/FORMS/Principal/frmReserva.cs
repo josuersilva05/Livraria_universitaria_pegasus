@@ -97,6 +97,7 @@ namespace Livraria_da_depressao.FORMS.Principal
             {
                 if (cboClienteReserva.Text != "")
                 {
+                    if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
                     Conexao.con.Open();
 
                     MySqlCommand msc = Conexao.con.CreateCommand();
@@ -153,6 +154,7 @@ namespace Livraria_da_depressao.FORMS.Principal
             {
                 if (cboLivroReserva.Text != "")
                 {
+                    if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
                     Conexao.con.Open();
 
                     MySqlCommand msc = Conexao.con.CreateCommand();

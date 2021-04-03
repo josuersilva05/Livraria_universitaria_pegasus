@@ -17,6 +17,7 @@ namespace Livraria_da_depressao.CODE.BLL
         int i;
         public bool verifica_login(LoginDTO log)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 i = 0;
@@ -32,6 +33,9 @@ namespace Livraria_da_depressao.CODE.BLL
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
                 i = Convert.ToInt32(dt.Rows.Count.ToString());
+
+                Console.Write(Conexao.con);
+
                 if (i == 0)
                 {
                     return false;
@@ -47,6 +51,8 @@ namespace Livraria_da_depressao.CODE.BLL
                         usuarioSessaoDTO.sexoUsuario = row[4].ToString();
                         usuarioSessaoDTO.usuario = log.nomeUsuario;
                     }
+                    da = null;
+                    dt = null;
                     return true;
                 }
             }
@@ -59,6 +65,7 @@ namespace Livraria_da_depressao.CODE.BLL
 
         public bool atualizar_perfil(usuarioSessaoDTO sdto)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 Conexao.con.Open();
@@ -90,6 +97,7 @@ namespace Livraria_da_depressao.CODE.BLL
 
         public bool verifica_senha(usuarioSessaoDTO sdto)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 int i = 0;
@@ -130,6 +138,7 @@ namespace Livraria_da_depressao.CODE.BLL
 
         public bool alterar_senha(usuarioSessaoDTO sdto)
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             try
             {
                 Conexao.con.Open();

@@ -44,7 +44,7 @@ namespace Livraria_da_depressao.FORMS.Configuracoes
                         campos.Add(dgvLivros.CurrentRow.Cells[i].Value.ToString());
                     }
                 }
-
+                if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
                 DataTable dt = new DataTable();
                 try
                 {
@@ -108,6 +108,7 @@ namespace Livraria_da_depressao.FORMS.Configuracoes
 
         private void carregar_livros()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             Conexao.con.Open();
             MySqlCommand cmd = Conexao.con.CreateCommand();
             cmd.CommandType = CommandType.Text;

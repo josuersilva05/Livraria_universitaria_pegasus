@@ -29,6 +29,7 @@ namespace Livraria_da_depressao.FORMS.UCs
 
         private void carregar_emprestimos()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             Conexao.con.Open();
             MySqlCommand cmd = Conexao.con.CreateCommand();
             cmd.CommandType = CommandType.Text;

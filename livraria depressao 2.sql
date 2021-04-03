@@ -98,7 +98,7 @@ create table MULTA (
 );
 
 
-
+select * from login;
 
 -- ////////////// PESQUISA
 

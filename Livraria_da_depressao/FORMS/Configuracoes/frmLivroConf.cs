@@ -120,6 +120,7 @@ namespace Livraria_da_depressao.FORMS.Configuracoes
 
         private void carregar_autores()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             Conexao.con.Open();
             MySqlCommand cmd = Conexao.con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -140,6 +141,7 @@ namespace Livraria_da_depressao.FORMS.Configuracoes
 
         private void carregar_editoras()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             Conexao.con.Open();
             MySqlCommand cmd = Conexao.con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -160,6 +162,7 @@ namespace Livraria_da_depressao.FORMS.Configuracoes
 
         private void carregar_categorias()
         {
+            if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
             Conexao.con.Open();
             MySqlCommand cmd = Conexao.con.CreateCommand();
             cmd.CommandType = CommandType.Text;

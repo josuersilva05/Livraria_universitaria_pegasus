@@ -28,6 +28,7 @@ namespace Livraria_da_depressao.FORMS.Principal
             {
                 try
                 {
+                    if (Conexao.con.State.ToString() == "Open") { Conexao.con.Close(); }
                     Conexao.con.Open();
                     MySqlCommand msc = Conexao.con.CreateCommand();
                     msc.CommandType = CommandType.Text;
