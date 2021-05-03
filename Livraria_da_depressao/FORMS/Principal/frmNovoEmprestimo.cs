@@ -40,9 +40,8 @@ namespace Livraria_da_depressao.FORMS.Principal
                     cboLivroEmprestimo.Items.Add(item.Cells[1].Value);
                 }
             }
-
-            cboLivroEmprestimo.SelectedIndex = 0;
-            cboClienteEmprestimo.SelectedIndex = 0; 
+            cboLivroEmprestimo.SelectedIndex = cboLivroEmprestimo.Items.Count > 0 ? 0 : -1;
+            cboClienteEmprestimo.SelectedIndex = cboClienteEmprestimo.Items.Count > 0 ? 0 : -1;
         }
         public frmNovoEmprestimo(List<livrosEmprestimoDTO> parmLivros, List<clientesEmprestimoDTO> parmClientes)
         {

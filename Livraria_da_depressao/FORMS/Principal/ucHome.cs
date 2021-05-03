@@ -348,7 +348,7 @@ namespace Livraria_da_depressao.FORMS
         private void btNovaReserva_Click(object sender, EventArgs e)
         {
             if (dgvResultadosPesquisa.CurrentRow.Cells[0].Value != null) {
-                if (dgvResultadosPesquisa.CurrentRow.Cells[2].Value.ToString() == "0")
+                if (dgvResultadosPesquisa.CurrentRow.Cells[5].Value.ToString() == "0")
                 {
                     List<string> campos = new List<string>();
                     campos.Add(dgvResultadosPesquisa.CurrentRow.Cells[0].Value.ToString());

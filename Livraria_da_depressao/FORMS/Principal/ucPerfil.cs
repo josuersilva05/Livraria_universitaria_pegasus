@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Livraria_da_depressao.FORMS.Principal;
 using Livraria_da_depressao.CODE.DTO;
 using Livraria_da_depressao.CODE.BLL;
+using Livraria_da_depressao.CODE.DAL;
 
 namespace Livraria_da_depressao.FORMS
 {
@@ -73,7 +74,10 @@ namespace Livraria_da_depressao.FORMS
             }
             //@"C:/Users/josue/source/repos/Livraria_da_depressao/Livraria_da_depressao/IMG/" + nomeFoto
             //Image foto = Image.FromFile(@"C:/Users/Casa/source/repos/Livraria_da_depressao/Livraria_da_depressao/IMG/" + nomeFoto);
-            Image foto = Image.FromFile(@"D:/0_Formatacao/source/repos/Livraria_da_depressao/Livraria_universitaria_pegasus/Livraria_da_depressao/IMG/" + nomeFoto);
+            ArquivosDeSistema file = new ArquivosDeSistema();
+            Console.Write(file.ImagesDirectory);
+            
+            Image foto = Image.FromFile(file.ImagesDirectory + "/" + nomeFoto);
             pcbFotoPerfil.Image = foto;
             pcbFotoPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
         }

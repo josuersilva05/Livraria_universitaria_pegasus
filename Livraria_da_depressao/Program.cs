@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Livraria_da_depressao.FORMS.Assistente_virtual;
+using Livraria_da_depressao.FORMS.Configuracoes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,9 @@ namespace Livraria_da_depressao
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+
+            Application.Run(new Marc21_teste());
+            //Application.Run(new frmLogin());
         }
     }
 }
