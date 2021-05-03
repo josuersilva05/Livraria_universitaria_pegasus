@@ -33,27 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net" />
-    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,12 +45,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Twilio, Version=5.59.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Twilio.5.59.0\lib\net451\Twilio.dll</HintPath>
-    </Reference>
-    <Reference Include="WhatsAppApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WhatsAppAPI.15.4.29\lib\net40\WhatsAppApi.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CODE\BLL\configuracoesBLL.cs" />
@@ -82,30 +58,6 @@
     <Compile Include="CODE\DTO\LoginDTO.cs" />
     <Compile Include="CODE\DTO\reservaDTO.cs" />
     <Compile Include="CODE\DTO\usuarioSessaoDTO.cs" />
-    <Compile Include="FORMS\Assistente virtual\Dialogo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\Assistente virtual\Dialogo.Designer.cs">
-      <DependentUpon>Dialogo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORMS\Assistente virtual\NewDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\Assistente virtual\NewDialog.Designer.cs">
-      <DependentUpon>NewDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORMS\Assistente virtual\NewDialog2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\Assistente virtual\NewDialog2.Designer.cs">
-      <DependentUpon>NewDialog2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORMS\Chatbot\ChatBot.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\Chatbot\ChatBot.Designer.cs">
-      <DependentUpon>ChatBot.cs</DependentUpon>
-    </Compile>
     <Compile Include="FORMS\Configuracoes\frmAutorConf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,12 +105,6 @@
     </Compile>
     <Compile Include="FORMS\Configuracoes\frmFuncionarioConf.Designer.cs">
       <DependentUpon>frmFuncionarioConf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORMS\Configuracoes\Marc21_teste.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\Configuracoes\Marc21_teste.Designer.cs">
-      <DependentUpon>Marc21_teste.cs</DependentUpon>
     </Compile>
     <Compile Include="FORMS\Configuracoes\ucGerAutores.cs">
       <SubType>UserControl</SubType>
@@ -312,18 +258,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FORMS\Assistente virtual\Dialogo.resx">
-      <DependentUpon>Dialogo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\Assistente virtual\NewDialog.resx">
-      <DependentUpon>NewDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\Assistente virtual\NewDialog2.resx">
-      <DependentUpon>NewDialog2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\Chatbot\ChatBot.resx">
-      <DependentUpon>ChatBot.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FORMS\Configuracoes\frmAutorConf.resx">
       <DependentUpon>frmAutorConf.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,9 +281,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\Configuracoes\frmFuncionarioConf.resx">
       <DependentUpon>frmFuncionarioConf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\Configuracoes\Marc21_teste.resx">
-      <DependentUpon>Marc21_teste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\Configuracoes\ucGerAutores.resx">
       <DependentUpon>ucGerAutores.cs</DependentUpon>
@@ -436,7 +367,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

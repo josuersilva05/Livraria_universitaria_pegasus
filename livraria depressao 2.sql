@@ -121,6 +121,9 @@ BEGIN
 END ; $$
 DELIMITER ;
 
+call pesquisar_disponibilidade_livro(10);
+update LIVROS set qtd = 1 where idLivro = 10;
+
 create procedure pesquisar_autor(parm varchar(255), parmLim int)
 	select LIVROS.idLivro as 'ID Livro', AUTORES.nomeAutor as 'Autor', LIVROS.nomeLivro as 'Livro' from AUTORES inner join LIVROS 
     on AUTORES.idAutor = LIVROS.idAutor where AUTORES.nomeAutor like concat('%',parm,'%') limit parmLim;
@@ -192,7 +195,6 @@ create procedure carregar_categorias()
 
 create procedure editar_categoria(parmId int, parmNome varchar(25))
 	update CATEGORIA set nomeCategoria = parmNome where idCategoria = parmId;
-
 
 
 -- ////////////// AUTORES

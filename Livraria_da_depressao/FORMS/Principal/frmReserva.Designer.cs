@@ -114,6 +114,10 @@
             // 
             this.cboClienteReserva.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboClienteReserva.FormattingEnabled = true;
+            this.cboClienteReserva.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino",
+            "Indefinido"});
             this.cboClienteReserva.Location = new System.Drawing.Point(214, 155);
             this.cboClienteReserva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboClienteReserva.Name = "cboClienteReserva";
